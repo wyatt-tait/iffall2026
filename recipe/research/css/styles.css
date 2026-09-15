@@ -1,0 +1,17 @@
+html {
+  color: rgb(0, 0, 0);
+  font-size: 12pt;
+  padding: 10%;
+}
+
+ul {
+    display: list-item;
+    list-style-type: disc;
+    margin: 0;
+    padding: 0;
+}
+
+ul2 {
+    display: list-item;
+    list-style-type: decimal;
+}
