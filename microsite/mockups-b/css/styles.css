@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 1rem;
+  font-family: system-ui, sans-serif;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;       /* keeps the aspect ratio */
+}
+
+.gallery {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;   /* two columns for the phones */
+  gap: 1.5rem;
+}
+
+/* Desktop mockups span both columns (full width) */
+.gallery .desktop {
+  grid-column: 1 / -1;
+}
+
+/* Phone mockups share a row, each at half width */
+.gallery .phone {
+  grid-column: span 1;
+}
+
+/* On very small screens, stack the phones too */
+@media (max-width: 500px) {
+  .gallery .phone {
+    grid-column: 1 / -1;
+  }
+}
