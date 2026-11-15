@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blunt and Other Handhelds | Medieval Weapons</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=IM+Fell+English:ital@0;1&family=Libre+Franklin:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="Images/favicon.png">
+    <link rel="apple-touch-icon" href="Images/favicon.png">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+
+  <body>
+    <header class="site-header">
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="Menu"><span></span><span></span><span></span></label>
+      <nav class="site-nav">
+        <ul>
+          <li><a href="index.html" data-label="Home">Home</a></li>
+          <li><a href="swords.html" data-label="Swords">Swords</a></li>
+          <li><a href="polearms.html" data-label="Polearms">Polearms</a></li>
+          <li><a href="bows.html" data-label="Bows">Bows</a></li>
+          <li><a href="blunt.html" class="current" data-label="Blunt Weapons">Blunt Weapons</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="page-head">
+        <div class="page-head-inner">
+          <h1 class="page-title">Blunt &amp; Other Handhelds</h1>
+          <div class="fighters">
+            <div class="fighter fighter-left">
+              <img src="Images/guy10.png" alt="Knight in mail swinging a flail while riding a rooster">
+            </div>
+            <div class="fighter fighter-right fighter-pair">
+              <img src="Images/guy1.png" alt="Two soldiers in blue mail arguing">
+            </div>
+          </div>
+          <p class="page-intro">Hammers, maces and flails that crushed and dented armour instead of cutting through it.</p>
+        </div>
+      </div>
+
+      <!-- Only one card can be open at a time (they are radio buttons).
+           "Show less" picks this hidden one, which closes every card. -->
+      <input type="radio" name="open-card" class="card-toggle" id="toggle-none" aria-label="Close all cards">
+
+      <ul class="cards weapon-cards">
+        <li>
+          <input type="radio" name="open-card" class="card-toggle" id="toggle-war-hammer" aria-label="Show full description">
+          <article class="card" aria-label="War hammer">
+            <label class="card-hit" for="toggle-war-hammer"></label>
+            <div class="card-media">
+              <img class="card-img" src="Images/WarHammer.png" alt="War hammer">
+            </div>
+            <div class="card-body">
+              <h2 class="card-name">War hammer</h2>
+              <p class="card-text">The war hammer evolved in the 11th and 12th centuries from simple tools such as the pick and the mallet. <span class="desc-rest">It consisted of a hammer head (used to damage armor plates and joints), balanced on the opposite side by a spike, a blade, or a pick. Some variants also featured a spike at the top of the shaft. In the 14th century, the war hammer was typically wielded with one hand and had a shaft proportion similar to that of a mace. In the 15th century, the head was also mounted on long poles, giving rise to pole-mounted variants such as the Lucerne hammer.</span></p>
+              <label class="more-btn more-label" for="toggle-war-hammer">More info</label>
+              <label class="more-btn less-label" for="toggle-none">Show less</label>
+            </div>
+          </article>
+        </li>
+        <li>
+          <input type="radio" name="open-card" class="card-toggle" id="toggle-mace" aria-label="Show full description">
+          <article class="card" aria-label="Mace">
+            <label class="card-hit" for="toggle-mace"></label>
+            <div class="card-media">
+              <img class="card-img" src="Images/Mace.png" alt="Mace">
+            </div>
+            <div class="card-body">
+              <h2 class="card-name">Mace</h2>
+              <p class="card-text">The mace first appeared in the 11th century and became along with the lance and sword, a secondary weapon for close combat. <span class="desc-rest">Early maces had a wooden shaft, with only the head made of iron or copper alloys. Starting in the 12th century, maces were increasingly made entirely of iron, which allowed them to inflict significantly greater damage, particularly against heavily armored opponents. Two main forms became established: a presumably older form with a knob-like head, and a variant with several flanges or wings arranged evenly around a tubular center and sharp enough to severely damage plate armor.</span></p>
+              <label class="more-btn more-label" for="toggle-mace">More info</label>
+              <label class="more-btn less-label" for="toggle-none">Show less</label>
+            </div>
+          </article>
+        </li>
+        <li>
+          <input type="radio" name="open-card" class="card-toggle" id="toggle-flail" aria-label="Show full description">
+          <article class="card" aria-label="Flail">
+            <label class="card-hit" for="toggle-flail"></label>
+            <div class="card-media">
+              <img class="card-img" src="Images/Flail.png" alt="Flail">
+            </div>
+            <div class="card-body">
+              <h2 class="card-name">Flail</h2>
+              <p class="card-text">The one handed war flail probably originating from the Khazars was introduced during the 10th century in Eastern Europe and the Islamic world. <span class="desc-rest">European flails usually consisted of a chain attached to a wooden shaft, with a smooth or spiked metal ball at the end. Some variations featured several balls strung one after another on a single chain or attached to multiple chains. The balls were typically made of iron, brass, bronze, or lead-filled iron. In Eastern Europe and the Islamic world, leather or hemp straps were usually used as connective elements, while organic materials such as bone, antler, or horn were used in addition to metal balls.</span></p>
+              <label class="more-btn more-label" for="toggle-flail">More info</label>
+              <label class="more-btn less-label" for="toggle-none">Show less</label>
+            </div>
+          </article>
+        </li>
+      </ul>
+    </main>
+
+    <footer class="site-footer">
+      <p>Weapon descriptions from <a href="https://en.wikipedia.org/wiki/List_of_medieval_weapons">"List of medieval weapons"</a> on Wikipedia.</p>
+      <p>&copy; 2026</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,730 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background-color: #dde5c8;
+  color: #222222;
+  font-family: "Libre Franklin", Arial, sans-serif;
+}
+
+
+/* Nav bar */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  padding: 0 16px;
+  background-color: #a0908a;
+  background-image: url("../Images/WeaponsContainer-web.jpg");
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+
+.site-nav ul {
+  display: flex;
+  gap: 80px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-nav a {
+  display: inline-block;
+  color: #2b2422;
+  font-family: "IM Fell English", Georgia, serif;
+  font-size: 1.6rem;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.site-nav a::after {
+  content: attr(data-label);
+  display: block;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.site-nav a.current,
+.site-nav a:hover {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.nav-toggle,
+.nav-toggle-label {
+  display: none;
+}
+
+
+/* Home page hero */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 66vw;
+  max-height: 1000px;
+  padding: 0 16px;
+  background-image: url("../Images/HeroLarge.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+.hero-title {
+  margin: 0;
+  font-family: "IM Fell English SC", Georgia, serif;
+  font-size: 4.5vw;
+  font-weight: normal;
+  line-height: 1;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.hero-intro {
+  width: 40vw;
+  max-width: 100%;
+  margin: 1.5vw 0 0;
+  font-size: 1.4vw;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+
+/* Weapon page titles and fighters */
+
+.page-head {
+  padding: 90px 16px 30px;
+  text-align: center;
+}
+
+.page-head-inner {
+  position: relative;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 220px;
+}
+
+.page-title {
+  margin: 0;
+  color: #111111;
+  font-family: "IM Fell English SC", Georgia, serif;
+  font-size: 4.5rem;
+  font-weight: normal;
+  line-height: 1.05;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.page-intro {
+  max-width: 34em;
+  margin: 10px auto 0;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.fighters {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fighter {
+  width: 200px;
+}
+
+.fighter-left {
+  text-align: right;
+}
+
+.fighter-right {
+  text-align: left;
+}
+
+.fighter img {
+  max-width: 100%;
+  max-height: 220px;
+  vertical-align: middle;
+  transition: transform 0.15s;
+}
+
+.fighter-left:hover img {
+  transform: rotate(20deg) scale(1.08);
+}
+
+.fighter-right:hover img {
+  transform: rotate(-20deg) scale(1.08);
+}
+
+.fighter.flip img {
+  transform: scaleX(-1);
+}
+
+.fighter-right.flip:hover img {
+  transform: rotate(-20deg) scale(1.08) scaleX(-1);
+}
+
+.fighter-pair img {
+  max-width: none;
+  max-height: none;
+  height: 202px;
+  margin: 0 -63px;
+}
+
+
+/* Weapon cards */
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 48px 40px;
+  margin: 70px auto 140px;
+  padding: 0;
+  list-style: none;
+}
+
+.weapon-cards {
+  width: 1338px;
+}
+
+.cards li {
+  position: relative;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 340px;
+  min-height: 600px;
+  padding: 24px 28px 32px;
+  background-color: #f9f9dc;
+  background-image: url("../Images/WeaponsContainer-web.jpg");
+  background-size: cover;
+  transition: width 0.3s, box-shadow 0.3s;
+}
+
+.card-toggle {
+  position: absolute;
+  opacity: 0;
+}
+
+.card-toggle:focus-visible + .card {
+  outline: 3px solid #222222;
+  outline-offset: 3px;
+}
+
+.card-hit {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.card-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 340px;
+  padding: 18% 20px 0;
+  background-image: url("../Images/CardDetailing.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100% auto;
+  transition: height 0.3s;
+}
+
+.card-img {
+  flex-shrink: 0;
+  width: 260px;
+  filter: drop-shadow(0 0 2px rgba(40, 30, 10, 0.5));
+  transform: rotate(-90deg);
+
+  transition: transform 0.7s cubic-bezier(0.6, 0, 0.35, 1.45), width 0.3s;
+}
+
+.card-img.flip {
+  transform: rotate(-90deg) scaleY(-1);
+}
+
+.card-body {
+  padding: 24px 20px 0;
+  border-top: 1.5px solid #222222;
+}
+
+.card-name {
+  margin: 0 0 14px;
+  font-family: "IM Fell English", Georgia, serif;
+  font-size: 1.9rem;
+  font-style: italic;
+  font-weight: normal;
+  line-height: 1.1;
+}
+
+.card-text {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.desc-rest {
+  display: none;
+}
+
+.more-btn {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  margin-top: 18px;
+  padding: 4px 11px 3px;
+  border: 1.5px solid #222222;
+  font-family: "IM Fell English", Georgia, serif;
+  font-size: 0.85rem;
+  font-style: italic;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.more-btn:hover {
+  background-color: #222222;
+  color: #f9f9dc;
+}
+
+.less-label {
+  display: none;
+}
+
+
+/* Open cards (hover or click) */
+
+.card-toggle:checked + .card {
+  width: 578px;
+  z-index: 5;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+}
+
+.card-toggle:checked + .card .card-media {
+  height: 240px;
+  flex-grow: 1;
+}
+
+.card-toggle:checked + .card .card-img {
+  width: 100%;
+  transform: rotate(0deg);
+}
+
+.card-toggle:checked + .card .card-img.flip {
+  transform: scaleY(-1);
+}
+
+.card-toggle:checked + .card .desc-rest {
+  display: inline;
+}
+
+.card-toggle:checked + .card .more-label {
+  display: none;
+}
+
+.card-toggle:checked + .card .less-label {
+  display: inline-block;
+}
+
+@media (min-width: 701px) {
+  .card-hit {
+    display: block;
+  }
+
+  .more-btn {
+    display: none;
+  }
+
+  .card-toggle:checked + .card .less-label {
+    display: inline-block;
+  }
+
+  .weapon-cards:not(:has(:checked)) .card:hover {
+    width: 578px;
+    z-index: 5;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+  }
+
+  .weapon-cards:not(:has(:checked)) .card:hover .card-media {
+    height: 240px;
+    flex-grow: 1;
+  }
+
+  .weapon-cards:not(:has(:checked)) .card:hover .card-img {
+    width: 100%;
+    transform: rotate(0deg);
+  }
+
+  .weapon-cards:not(:has(:checked)) .card:hover .card-img.flip {
+    transform: scaleY(-1);
+  }
+
+  .weapon-cards:not(:has(:checked)) .card:hover .desc-rest {
+    display: inline;
+  }
+}
+
+
+/* Home page cards */
+
+.home-cards {
+  width: 1530px;
+}
+
+.home-card {
+  width: 300px;
+  min-height: 480px;
+  color: #222222;
+  text-decoration: none;
+}
+
+.home-card .card-media {
+  height: 220px;
+  padding: 18% 0 0;
+}
+
+.home-card .card-img {
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+  transform: none;
+}
+
+.home-card .card-name {
+  margin-bottom: 12px;
+}
+
+.home-card .desc-rest {
+  display: inline;
+}
+
+@media (min-width: 701px) {
+  .home-card:hover {
+    width: 510px;
+    z-index: 5;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+  }
+
+  .home-card:hover .card-media {
+    flex-grow: 1;
+  }
+
+  .home-card:hover .card-img {
+    transform: scale(1.15);
+    animation: shudder 0.45s;
+  }
+
+}
+
+@keyframes shudder {
+  0%   { transform: scale(1)    rotate(0deg); }
+  20%  { transform: scale(1.15) rotate(-3deg); }
+  40%  { transform: scale(1.15) rotate(3deg); }
+  60%  { transform: scale(1.15) rotate(-2deg); }
+  80%  { transform: scale(1.15) rotate(1deg); }
+  100% { transform: scale(1.15) rotate(0deg); }
+}
+
+
+/* Footer */
+
+.site-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  min-height: 100px;
+  padding: 24px 16px;
+  background-color: #a0908a;
+  background-image: url("../Images/WeaponsContainer-web.jpg");
+  background-size: cover;
+  background-blend-mode: multiply;
+  color: #2b2422;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+.site-footer a {
+  color: #2b2422;
+}
+
+
+/* Smaller screens */
+
+@media (min-width: 1516px) {
+  .hero-title {
+    font-size: 68px;
+  }
+
+  .hero-intro {
+    width: 600px;
+    margin-top: 22px;
+    font-size: 21px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .hero-intro {
+    width: 50vw;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 1561px) {
+  .home-cards {
+    width: 850px;
+  }
+}
+
+@media (max-width: 1369px) {
+  .weapon-cards {
+    width: 958px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .site-nav ul {
+    gap: 40px;
+  }
+
+  .page-head-inner {
+    padding: 0 160px;
+  }
+
+  .page-title {
+    font-size: 3.2rem;
+  }
+
+  .page-intro {
+    font-size: 1.15rem;
+  }
+
+  .fighter {
+    width: 140px;
+  }
+
+  .fighter img {
+    max-height: 160px;
+  }
+
+  .fighter-pair img {
+    height: 147px;
+    margin: 0 -46px;
+  }
+}
+
+@media (max-width: 989px) {
+  .weapon-cards {
+    width: 578px;
+  }
+}
+
+@media (max-width: 881px) {
+  .home-cards {
+    width: 510px;
+  }
+}
+
+@media (max-width: 760px) {
+  .site-header {
+    justify-content: flex-start;
+  }
+
+  .nav-toggle-label {
+    display: block;
+    width: 32px;
+    cursor: pointer;
+  }
+
+  .nav-toggle-label span {
+    display: block;
+    height: 3px;
+    margin: 6px 0;
+    border-radius: 2px;
+    background-color: #6b3a44;
+  }
+
+  .site-nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #a0908a;
+    background-image: url("../Images/WeaponsContainer-web.jpg");
+    background-size: cover;
+    background-blend-mode: multiply;
+  }
+
+  .nav-toggle:checked ~ .site-nav {
+    display: block;
+  }
+
+  .site-nav ul {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .site-nav a {
+    display: block;
+    padding: 12px 16px;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 700px) {
+
+  .hero {
+    display: block;
+    height: auto;
+    min-height: 0;
+    padding: 29vw 16px 0;
+    background-size: 200% auto;
+    background-position: center top;
+  }
+
+  .hero-title {
+    max-width: 60vw;
+    margin: 0 auto 34vw;
+    font-size: 7vw;
+  }
+
+  .hero-intro {
+    width: auto;
+    max-width: 34em;
+    margin: 0 auto;
+    font-size: 1rem;
+  }
+
+  .page-head {
+    padding: 50px 16px 14px;
+  }
+
+  .page-head-inner {
+    padding: 0;
+  }
+
+  .page-title {
+    font-size: 2.4rem;
+  }
+
+  .page-intro {
+    margin-top: 18px;
+    font-size: 1rem;
+  }
+
+  .fighters {
+    position: static;
+    transform: none;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 18px;
+  }
+
+  .fighter {
+    width: auto;
+  }
+
+  .fighter img {
+    max-height: 140px;
+  }
+
+  .fighter-pair img {
+    height: 128px;
+    margin: 0 -40px;
+  }
+
+  .weapon-cards,
+  .home-cards {
+    width: auto;
+  }
+
+  .cards {
+    gap: 24px;
+    margin: 30px 28px 60px;
+  }
+
+  .cards li {
+    width: 100%;
+  }
+
+  .card,
+  .home-card,
+  .card-toggle:checked + .card {
+    width: 100%;
+    min-height: 0;
+    padding: 16px 20px 24px;
+    box-shadow: none;
+  }
+
+  .card-media {
+    height: 302px;
+    padding: 18% 4px 0;
+  }
+
+  .card-toggle:checked + .card .card-media {
+    height: 160px;
+  }
+
+  .home-card .card-media {
+    height: 280px;
+  }
+
+  .card-img {
+    width: 220px;
+  }
+
+  .card-body {
+    padding: 18px 4px 0;
+  }
+
+  .card-name {
+    margin-bottom: 10px;
+    font-size: 1.6rem;
+  }
+
+  .card-text {
+    font-size: 0.95rem;
+  }
+
+  .site-footer {
+    min-height: 70px;
+    font-size: 0.75rem;
+  }
+}

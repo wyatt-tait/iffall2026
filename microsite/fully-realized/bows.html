@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bows | Medieval Weapons</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=IM+Fell+English:ital@0;1&family=Libre+Franklin:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="Images/favicon.png">
+    <link rel="apple-touch-icon" href="Images/favicon.png">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+
+  <body>
+    <header class="site-header">
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="Menu"><span></span><span></span><span></span></label>
+      <nav class="site-nav">
+        <ul>
+          <li><a href="index.html" data-label="Home">Home</a></li>
+          <li><a href="swords.html" data-label="Swords">Swords</a></li>
+          <li><a href="polearms.html" data-label="Polearms">Polearms</a></li>
+          <li><a href="bows.html" class="current" data-label="Bows">Bows</a></li>
+          <li><a href="blunt.html" data-label="Blunt Weapons">Blunt Weapons</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+
+      <div class="page-head">
+        <div class="page-head-inner">
+          <h1 class="page-title">Bows</h1>
+          <div class="fighters">
+            <div class="fighter fighter-left">
+              <img src="Images/guy4.png" alt="Crossbowman in mail aiming a crossbow">
+            </div>
+            <div class="fighter fighter-right flip">
+              <img src="Images/guy8.png" alt="Archer in an orange tunic drawing a bow">
+            </div>
+          </div>
+          <p class="page-intro">Bows, crossbows and the sling let soldiers strike from a distance.</p>
+        </div>
+      </div>
+      <!-- Only one card can be open at a time (they are radio buttons).
+           "Show less" picks this hidden one, which closes every card. -->
+      <input type="radio" name="open-card" class="card-toggle" id="toggle-none" aria-label="Close all cards">
+
+      <ul class="cards weapon-cards">
+        <li>
+          <input type="radio" name="open-card" class="card-toggle" id="toggle-self-bow" aria-label="Show full description">
+          <article class="card" aria-label="Self bow">
+            <label class="card-hit" for="toggle-self-bow"></label>
+            <div class="card-media">
+              <img class="card-img" src="Images/SelfBow.png" alt="Self bow">
+            </div>
+            <div class="card-body">
+              <h2 class="card-name">Self bow</h2>
+              <p class="card-text">Medieval self- or stave bows were made from ash, yew, hazel, elm, and holly wood. <span class="desc-rest">Stave bows varied in length from 5 feet (1.5 m) to 6.3 feet (1.9 m) and had a thick D-shaped cross-section. The back of the bow (the side facing the target) was flat, while the belly was rounded. The bow shaft tapered gradually toward both ends and was usually fitted with horn nocks. A yarn winding was often applied in the middle. The bowstring was made of flax or linen and coated with beeswax. Depending on the bow’s length, the maximum range was between 100 yards (91 m) and 400 yards (370 m). The draw weight also varied from 90 pounds (41 kg) to 140 pounds (64 kg).</span></p>
+              <label class="more-btn more-label" for="toggle-self-bow">More info</label>
+              <label class="more-btn less-label" for="toggle-none">Show less</label>
+            </div>
+          </article>
+        </li>
+        <li>
+          <input type="radio" name="open-card" class="card-toggle" id="toggle-composite-bow" aria-label="Show full description">
+          <article class="card" aria-label="Composite bow">
+            <label class="card-hit" for="toggle-composite-bow"></label>
+            <div class="card-media">
+              <img class="card-img" src="Images/CompositeBow.png" alt="Composite bow">
+            </div>
+            <div class="card-body">
+              <h2 class="card-name">Composite bow</h2>
+              <p class="card-text">The composite bow was constructed of several layers of wood, sinew, horn and bone. <span class="desc-rest">There were several different variants in slightly varying forms. Although mostly associated with the Islamic world and Eastern Europe, the composite bow was also used in Western Europe. A composite bow usually consisted of a stave made in three parts: a centre part and two wings. A shape was formed over these pieces of wood. Horn was glued to one side and sinew to the other. The entire stave was then bent backwards. On the inside, the horn pushed and on the outside, the sinew pulled. Composite bows had a length between 2.4 feet (73 cm) to 5 feet (150 cm). Composite bows often featured a &quot;Mongol&quot; thumb-draw and they had a effective range of some 191 yards (175 m).</span></p>
+              <label class="more-btn more-label" for="toggle-composite-bow">More info</label>
+              <label class="more-btn less-label" for="toggle-none">Show less</label>
+            </div>
+          </article>
+        </li>
+        <li>
+          <input type="radio" name="open-card" class="card-toggle" id="toggle-crossbow" aria-label="Show full description">
+          <article class="card" aria-label="Crossbow">
+            <label class="card-hit" for="toggle-crossbow"></label>
+            <div class="card-media">
+              <img class="card-img" src="Images/CrossBow.png" alt="Crossbow">
+            </div>
+            <div class="card-body">
+              <h2 class="card-name">Crossbow</h2>
+              <p class="card-text">The crossbow likely originated from the ancient Greek gastraphetes. <span class="desc-rest">The oldest depictions date from the late Roman period, presumably from the 4th or 5th century. Initially used only rarely by the Franks, it grew increasingly popular beginning in the 11th century. It consisted of a short, heavy bow attached to a wooden shaft. On the top was a groove for the bolt. The trigger mechanism usually consisted of a rotating disc made of hard material, known as the nut. When drawn, the nut held the string in place; pulling the trigger a lever on the underside released the string. Beginning in the 13th century, wooden crossbows were gradually replaced by stronger composite crossbows. These often featured a stirrup at the front of the stock, into which the archer placed a foot when drawing the string, or were drawn using a winch. Starting in the late 15th century, the nut and trigger were sometimes separated by an internal iron-alloy tumbler to reduce trigger resistance. This had to be adjusted before each shot using a cord running along the stock. To prevent accidental firing, crossbows from this period onward were equipped with trigger safety mechanisms.</span></p>
+              <label class="more-btn more-label" for="toggle-crossbow">More info</label>
+              <label class="more-btn less-label" for="toggle-none">Show less</label>
+            </div>
+          </article>
+        </li>
+        <li>
+          <input type="radio" name="open-card" class="card-toggle" id="toggle-sling" aria-label="Show full description">
+          <article class="card" aria-label="Sling">
+            <label class="card-hit" for="toggle-sling"></label>
+            <div class="card-media">
+              <img class="card-img" src="Images/Sling.png" alt="Sling">
+            </div>
+            <div class="card-body">
+              <h2 class="card-name">Sling</h2>
+              <p class="card-text">Originally a weapon used by peasants, the sling was typically made of leather or fabric and consisted of a small pouch with a thong on either side. <span class="desc-rest">After placing a projectile either a rounded pebble or, in later times, a lead shot in the pouch, the sling was whirled around in one hand. Upon gathering sufficient momentum, one string was released, expelling the shot. A variant the fustibalus or fustibal consisting of a sling attached to the end of a rod about 39 inches (99 cm) length had a effective range of more than 180 yards (160 m).</span></p>
+              <label class="more-btn more-label" for="toggle-sling">More info</label>
+              <label class="more-btn less-label" for="toggle-none">Show less</label>
+            </div>
+          </article>
+        </li>
+      </ul>
+    </main>
+
+    <footer class="site-footer">
+      <p>Weapon descriptions from <a href="https://en.wikipedia.org/wiki/List_of_medieval_weapons">"List of medieval weapons"</a> on Wikipedia.</p>
+      <p>&copy; 2026</p>
+    </footer>
+
+  </body>
+</html>

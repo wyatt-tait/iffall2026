@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Swords & Blades | Medieval Weapons</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=IM+Fell+English:ital@0;1&family=Libre+Franklin:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="Images/favicon.png">
+    <link rel="apple-touch-icon" href="Images/favicon.png">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+
+  <body>
+    <header class="site-header">
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="Menu"><span></span><span></span><span></span></label>
+      <nav class="site-nav">
+        <ul>
+          <li><a href="index.html" data-label="Home">Home</a></li>
+          <li><a href="swords.html" class="current" data-label="Swords">Swords</a></li>
+          <li><a href="polearms.html" data-label="Polearms">Polearms</a></li>
+          <li><a href="bows.html" data-label="Bows">Bows</a></li>
+          <li><a href="blunt.html" data-label="Blunt Weapons">Blunt Weapons</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="page-head">
+        <div class="page-head-inner">
+          <h1 class="page-title">Swords &amp; Blades</h1>
+          <div class="fighters">
+            <div class="fighter fighter-left">
+              <img src="Images/guy3.png" alt="Knight in blue mail raising a sword">
+            </div>
+            <div class="fighter fighter-right">
+              <img src="Images/guy2.png" alt="Hare holding a sword and a round shield">
+            </div>
+          </div>
+          <p class="page-intro">From the knight’s one-handed sword to the Anglo-Saxon sax: the edged weapons carried across medieval Europe and the Middle East.</p>
+        </div>
+      </div>
+
+      <!-- Only one card can be open at a time (they are radio buttons).
+           "Show less" picks this hidden one, which closes every card. -->
+      <input type="radio" name="open-card" class="card-toggle" id="toggle-none" aria-label="Close all cards">
+
+      <ul class="cards weapon-cards">
+        <li>
+          <input type="radio" name="open-card" class="card-toggle" id="toggle-bastardsword" aria-label="Show full description">
+          <article class="card" aria-label="Bastardsword">
+            <label class="card-hit" for="toggle-bastardsword"></label>
+            <div class="card-media">
+              <img class="card-img" src="Images/BastardSword.png" alt="Bastardsword">
+            </div>
+            <div class="card-body">
+              <h2 class="card-name">Bastardsword</h2>
+              <p class="card-text">The Bastardsword was balanced in such a way that it could be wielded with either one or two hands, making it an intermediate form between the long sword and the knightly sword. <span class="desc-rest">Typically, the blade length ranges from 41 inches (1.0 m) to 47 inches (1.2 m), with a weight of 3 pounds (1.4 kg) to 4.1 pounds (1.9 kg).</span></p>
+              <label class="more-btn more-label" for="toggle-bastardsword">More info</label>
+              <label class="more-btn less-label" for="toggle-none">Show less</label>
+            </div>
+          </article>
+        </li>
+        <li>
+          <input type="radio" name="open-card" class="card-toggle" id="toggle-longsword" aria-label="Show full description">
+          <article class="card" aria-label="Longsword">
+            <label class="card-hit" for="toggle-longsword"></label>
+            <div class="card-media">
+              <img class="card-img" src="Images/Longsword.png" alt="Longsword">
+            </div>
+            <div class="card-body">
+              <h2 class="card-name">Longsword</h2>
+              <p class="card-text">The Longsword first appeared around 1250. <span class="desc-rest">Early long swords resembled one-handed swords, featuring relatively broad blades that were either parallel-sided or slightly tapered. Later long swords (after 1350) had blades that tapered to a sharp point along their full length, with diamond-shaped cross-sections. This made them strong and rigid thrusting weapons that were effective against plate armour. By the early 14th century, the longsword had evolved into a cutting and thrusting weapon with a sharp point for thrusting and a wide, flat middle section for cutting. The typical longsword had a length of about 48 inches (120 cm) from pommel to tip and had a weight of 2.5 pounds (1.1 kg) to 4 pounds (1.8 kg).</span></p>
+              <label class="more-btn more-label" for="toggle-longsword">More info</label>
+              <label class="more-btn less-label" for="toggle-none">Show less</label>
+            </div>
+          </article>
+        </li>
+        <li>
+          <input type="radio" name="open-card" class="card-toggle" id="toggle-knightly-sword" aria-label="Show full description">
+          <article class="card" aria-label="Knightly sword">
+            <label class="card-hit" for="toggle-knightly-sword"></label>
+            <div class="card-media">
+              <img class="card-img" src="Images/Nightsword.png" alt="Knightly sword">
+            </div>
+            <div class="card-body">
+              <h2 class="card-name">Knightly sword</h2>
+              <p class="card-text">The single handed knightly sword first appeared in the 5th century. <span class="desc-rest">These early knightly swords featured a transverse, toggle-shaped pommel, a short wooden grip, and a short, straight crossguard. They had rounded tips and were used for slashing rather than thrusting. By the 12th century, pointed blades had been developed that could also be used for thrusting. The knight’s sword had a blade length ranging from 31 inches (79 cm) to a maximum of 33.4 inches (85 cm).</span></p>
+              <label class="more-btn more-label" for="toggle-knightly-sword">More info</label>
+              <label class="more-btn less-label" for="toggle-none">Show less</label>
+            </div>
+          </article>
+        </li>
+        <li>
+          <input type="radio" name="open-card" class="card-toggle" id="toggle-saif" aria-label="Show full description">
+          <article class="card" aria-label="Saif">
+            <label class="card-hit" for="toggle-saif"></label>
+            <div class="card-media">
+              <img class="card-img" src="Images/Saif.png" alt="Saif">
+            </div>
+            <div class="card-body">
+              <h2 class="card-name">Saif</h2>
+              <p class="card-text">The saif the Islamic sword was similar to European swords with a straight double-edged blade and a straight hilt. <span class="desc-rest">It is impossible to say with certainty when exactly the curved hilt and the curved blade were introduced. While the traditional view dates the curved blade to the 14th century, there are too many exceptions to support this theory.</span></p>
+              <label class="more-btn more-label" for="toggle-saif">More info</label>
+              <label class="more-btn less-label" for="toggle-none">Show less</label>
+            </div>
+          </article>
+        </li>
+        <li>
+          <input type="radio" name="open-card" class="card-toggle" id="toggle-dagger" aria-label="Show full description">
+          <article class="card" aria-label="Dagger">
+            <label class="card-hit" for="toggle-dagger"></label>
+            <div class="card-media">
+              <img class="card-img" src="Images/Dagger.png" alt="Dagger">
+            </div>
+            <div class="card-body">
+              <h2 class="card-name">Dagger</h2>
+              <p class="card-text">The dagger probably originated as early as the Neolithic period through the use of hand-held spearheads. <span class="desc-rest">Contemporary European terms for this weapon were coustel or cultellus, and until the 13th century it was used only by ordinary foot soldiers. From the 12th century onwards, the term dagger became established, deriving from the Vulgar Latin word dagua. Six types of dagger can be identified on the basis of their hilts: the quillon dagger, the rondel dagger, the kidney dagger, the ear-pommel dagger, transitional types and the cinquedea. The blades range in length from 8 inches (20 cm) to 19 inches (48 cm).</span></p>
+              <label class="more-btn more-label" for="toggle-dagger">More info</label>
+              <label class="more-btn less-label" for="toggle-none">Show less</label>
+            </div>
+          </article>
+        </li>
+        <li>
+          <input type="radio" name="open-card" class="card-toggle" id="toggle-sax" aria-label="Show full description">
+          <article class="card" aria-label="Sax">
+            <label class="card-hit" for="toggle-sax"></label>
+            <div class="card-media">
+              <img class="card-img" src="Images/Sax.png" alt="Sax">
+            </div>
+            <div class="card-body">
+              <h2 class="card-name">Sax</h2>
+              <p class="card-text">Sax or seax, (Old English: seax knife), seems to have first appeared in the 5th century. <span class="desc-rest">Although most closely associated with the Anglo-Saxons, the sax was also carried by the Vikings. The sax had a single-edged blade ranging in length from 4.7 inches (12 cm) to 39.3 inches (100 cm). The back was either straight or slightly curved. Beginning in the 9th and 10th centuries, a wider sax developed, whose flat, straight back sloped downward toward the tip at a blunt angle. The sax often featured copper or silver inlaid decoration or rune inscriptions.</span></p>
+              <label class="more-btn more-label" for="toggle-sax">More info</label>
+              <label class="more-btn less-label" for="toggle-none">Show less</label>
+            </div>
+          </article>
+        </li>
+      </ul>
+    </main>
+
+    <footer class="site-footer">
+      <p>Weapon descriptions from <a href="https://en.wikipedia.org/wiki/List_of_medieval_weapons">"List of medieval weapons"</a> on Wikipedia.</p>
+      <p>&copy; 2026</p>
+    </footer>
+  </body>
+</html>
